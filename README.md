@@ -1,4 +1,4 @@
-# Arduino Core for STM32L0 based boards
+# Arduino Core for STM32L0 based boards (Extension for CH2i Boards)
 
 ## What is it ?
 
@@ -52,75 +52,26 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
 
 ## Installing
 
-### Board Manager
+### Install original repository
 
-1. Download and install the Arduino IDE (at least version v1.6.8)
-2. Start the Arduino IDE
-3. Go into Preferences
-4. Add https://ch2i.eu/package_stm32l0_boards_index.json as an "Additional Board Manager URL"
-5. Open the Boards Manager from the Tools -> Board menu and install "Tlera Corp and CH2i STM32L0 Boards"
-6. Select your STM32L0 board from the Tools -> Board menu
-7. Select your CH2i STM32L0 board version from the Tools -> Board menu -> Board version
+Follow installation for [original repository(https://github.com/GrumpyOldPizza/ArduinoCore-stm32l0)
 
+### Add CH2i Boards 
 
-### Manually
+Please to this step each time you update Tlera Corp Board from Arduino Board Manager
 
-Donwload ZIP file from this rpo folder using Clone or Downlaod button then select Download ZIP
+Donwload ZIP file from this repo folder using Clone or Download button then select Download ZIP
 
- 1. ```cd <SKETCHBOOK>```, where ```<SKETCHBOOK>``` is your Arduino Sketch folder:
-  * OS X: ```~/Documents/Arduino```
-  * Linux: ```~/Arduino```
+ 1. Locate were the original repository was stored by Board Manager
+  * OS X: ```~/Library/Arduino15/packages/TleraCorp/hardware/stm32l0/<VERSION>```
+  * Linux: ```~/.arduino15/packages/TleraCorp/hardware/stm32l0/<VERSION>```
   * Windows: ```~/Documents/Arduino```
- 2. Create a folder named ```hardware/CH2i-stm32l0```, if it does not exist, and change directories to it
- 3. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/CH2i-stm32l0``` folder
- 4. Rename the folder ```ArduinoCore-stm32l0-master``` to whatever you like, IE ```stm32l0```
- 5. Restart the Arduino IDE
+ 2. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/stm32l0/<VERSION>/``` folder overwriting all files when asked
+ 3. Restart the Arduino IDE
 
 
-### From git
 
- 1. Follow steps from Board Manager section above
- 2. ```cd <SKETCHBOOK>```, where ```<SKETCHBOOK>``` is your Arduino Sketch folder:
-  * OS X: ```~/Documents/Arduino```
-  * Linux: ```~/Arduino```
-  * Windows: ```~/Documents/Arduino```
- 3. Create a folder named ```hardware```, if it does not exist, and change directories to it
- 4. Clone this repo: ```git clone https://github.com/ch2i/ArduinoCore-stm32l0.git CH2i/stm32l0```
- 5. Restart the Arduino IDE
-
-#### OS Specific Setup
-
-##### Linux
-
- 1. Go to ~/.arduino15/packages/TleraCorp/hardware/stm32l0/```<VERSION>```/drivers/linux/
- 2. sudo cp *.rules /etc/udev/rules.d
- 3. reboot
-
-#####  Windows
-
-###### STM32 BOOTLOADER driver setup for Tlera Corp and CH2i boards
-
- 1. Download [Zadig](http://zadig.akeo.ie)
- 2. Plugin STM32L0 board and toggle the RESET button while holding down the BOOT button
- 3. Let Windows finish searching for drivers
- 4. Start ```Zadig```
- 5. Select ```Options -> List All Devices```
- 6. Select ```STM32 BOOTLOADER``` from the device dropdown
- 7. Select ```WinUSB (v6.1.7600.16385)``` as new driver
- 8. Click ```Replace Driver```
-
-###### USB Serial driver setup for Tlera Corp and CH2i boards (Window XP / Windows 7 only)
-
- 1. Go to ~/AppData/Local/Arduino15/packages/TleraCorp/hardware/stm32l0/```<VERSION>```/drivers/windows
- 2. Right-click on ```dpinst_x86.exe``` (32 bit Windows) or ```dpinst_amd64.exe``` (64 bit Windows) and select ```Run as administrator```
- 3. Click on ```Install this driver software anyway``` at the ```Windows Security``` popup as the driver is unsigned
-
-###### ST-LINK V2.1 driver setup for STMicroelectronics boards
-
- 1. Plugin STMicroelectronics board
- 2. Download and install [ST-Link USB Drivers](http://www.st.com/en/embedded-software/stsw-link009.html)
-
-## Recovering from a faulty sketch for Tlera Corp or CH2i Boards
+## Recovering from a faulty sketch for Boards
 
  Sometimes a faulty sketch can render the normal USB Serial based integration into the Arduindo IDE not working. In this case plugin the STM32L0 board and toggle the RESET button while holding down the BOOT button and program a known to be working sketch to go ack to a working USB Serial setup.
 
