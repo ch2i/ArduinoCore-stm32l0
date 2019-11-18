@@ -52,6 +52,17 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
 
 ## Installing
 
+### Board Manager
+
+1. Download and install the Arduino IDE (at least version v1.6.8)
+2. Start the Arduino IDE
+3. Go into Preferences
+4. Add https://ch2i.eu/package_stm32l0_boards_index.json as an "Additional Board Manager URL"
+5. Open the Boards Manager from the Tools -> Board menu and install "Tlera Corp and CH2i STM32L0 Boards"
+6. Select your STM32L0 board from the Tools -> Board menu
+7. Select your CH2i STM32L0 board version from the Tools -> Board menu -> Board version
+
+
 ### Manually
 
 Donwload ZIP file from this rpo folder using Clone or Downlaod button then select Download ZIP
@@ -60,9 +71,9 @@ Donwload ZIP file from this rpo folder using Clone or Downlaod button then selec
   * OS X: ```~/Documents/Arduino```
   * Linux: ```~/Arduino```
   * Windows: ```~/Documents/Arduino```
- 2. Create a folder named ```hardware```, if it does not exist, and change directories to it
- 3. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware``` folder
- 4. Rename the folder ```ArduinoCore-stm32l0-master``` to whatever you like, IE ```CH2i-stm32l0```
+ 2. Create a folder named ```hardware/CH2i-stm32l0```, if it does not exist, and change directories to it
+ 3. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/CH2i-stm32l0``` folder
+ 4. Rename the folder ```ArduinoCore-stm32l0-master``` to whatever you like, IE ```stm32l0```
  5. Restart the Arduino IDE
 
 
