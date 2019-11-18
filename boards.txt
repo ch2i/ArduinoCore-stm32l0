@@ -66,5 +66,5 @@ CH2i-Murata-L082CZ.menu.version.v10=V1.0
 CH2i-Murata-L082CZ.menu.version.v10.build.extra_flags=-DSTM32L082xx -DBOARD_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
 CH2i-Murata-L082CZ.menu.version.v10a=V1.0a
 CH2i-Murata-L082CZ.menu.version.v10a.build.extra_flags=-DSTM32L082xx -DBOARD_V10a -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
-CH2i-Murata-L082CZ.menu.version.envirodev=Enviro Dev V1.0
-CH2i-Murata-L082CZ.menu.version.envirodev.build.extra_flags=-DSTM32L082xx -DBOARD_ENVIRODEV_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
+CH2i-Murata-L082CZ.menu.version.ed=ED V1.0
+CH2i-Murata-L082CZ.menu.version.ed.build.extra_flags=-DSTM32L082xx -DBOARD_ED_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
