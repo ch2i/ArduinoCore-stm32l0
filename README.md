@@ -18,6 +18,34 @@ ArduinoCore-stm32l0 is targeted at ultra low power scenarios, sensor hubs, with 
  * [NUCLEO-L053R8](http://www.st.com/en/evaluation-tools/nucleo-l053r8.html)
  * [NUCLEO-L073RZ](http://www.st.com/en/evaluation-tools/nucleo-l073rz.html)
 
+### CH2i
+ * CH2i various boards on Murata L082CZ chip
+ 
+CH2i boards are based on Tlera Corp boards but we added some features such as 
+- RGB LED
+- DS18B20 GPIO definition
+
+When selected board you can select type by a new submenu called Board Type, and the following symbol will also be defined
+
+- V1.0 ```BOARD_V10```
+- V1.0a ```BOARD_V10a```
+- ED V1.0 ```BOARD_ED_V10```
+
+You can see these boards pinout definition in the file [variant.h](variants/CH2i-Murata-L082CZ/variant.h)
+
+Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0_CH2I_MURATA``` and version with also the following symbols
+
+```cpp
+#if defined (ARDUINO_STM32L0_CH2I_MURATA)
+	#if defined (BOARD_V10) 
+	// Code
+	#elif defined (BOARD_V10a)
+	// Code
+	#elif defined (BOARD_ED_V10)
+	// Code
+	#endif
+#endif
+```
 
 ## Installing
 
@@ -51,7 +79,7 @@ ArduinoCore-stm32l0 is targeted at ultra low power scenarios, sensor hubs, with 
  7. Select ```WinUSB (v6.1.7600.16385)``` as new driver
  8. Click ```Replace Driver```
 
-###### USB Serial driver setup for Tlera Corp boards (Window XP / Windows 7 only)
+###### USB Serial driver setup for Tlera Corp and CH2i boards (Window XP / Windows 7 only)
 
  1. Go to ~/AppData/Local/Arduino15/packages/TleraCorp/hardware/stm32l0/```<VERSION>```/drivers/windows
  2. Right-click on ```dpinst_x86.exe``` (32 bit Windows) or ```dpinst_amd64.exe``` (64 bit Windows) and select ```Run as administrator```
