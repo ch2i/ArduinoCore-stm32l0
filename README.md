@@ -21,9 +21,12 @@ ArduinoCore-stm32l0 is targeted at ultra low power scenarios, sensor hubs, with 
 ### CH2i
  * CH2i various boards on Murata L082CZ chip
  
-CH2i boards are based on Tlera Corp boards but we added some features such as 
-- RGB LED
-- DS18B20 GPIO definition
+CH2i boards are based on Tlera Corp boards but we added some features such as: 
+
+- RGB LED pins defined with ```LED_RED```, ```LED_GRN```, ```LED_BLU```
+- DS18B20 GPIO definition defined ```ONEWIREPWR``` (Pin to power DS18B20, usually pin connected to VDD of the DS18B20), ```ONEWIREBUS``` (DS_DQ with 4K7 pullup)
+- Battery Reading defined by ```BAT_ENABLE``` (Pin to enable battery reading), ```BAT_ANALOG``` (pin to read analog value)
+
 
 When selected board you can select type by a new submenu called Board Type, and the following symbol will also be defined
 
@@ -31,7 +34,7 @@ When selected board you can select type by a new submenu called Board Type, and 
 - V1.0a ```BOARD_V10a```
 - ED V1.0 ```BOARD_ED_V10```
 
-You can see these boards pinout definition in the file [variant.h](variants/CH2i-Murata-L082CZ/variant.h)
+You can see these boards pinout definition in the file [variant.h](https://github.com/ch2i/ArduinoCore-stm32l0/blob/master/variants/CH2i-Murata-L082CZ/variant.h#L187-L300)
 
 Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0_CH2I_MURATA``` and version with also the following symbols
 
@@ -58,7 +61,7 @@ Donwload ZIP file from this rpo folder using Clone or Downlaod button then selec
   * Linux: ```~/Arduino```
   * Windows: ```~/Documents/Arduino```
  2. Create a folder named ```hardware```, if it does not exist, and change directories to it
- 3. Extract the ZIP file content into the ardware folder
+ 3. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware``` folder
  4. Rename the folder ```ArduinoCore-stm32l0-master``` to whatever you like, IE ```CH2i-stm32l0```
  5. Restart the Arduino IDE
 
