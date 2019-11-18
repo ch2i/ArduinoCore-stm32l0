@@ -202,7 +202,7 @@ extern Uart Serial3;
 #define BAT_ENABLE  (10u)
 #define ONEWIREBUS 4
 #define ONEWIREPWR 3
-#elif defined (BOARD_ENVIRODEV_V10)
+#elif defined (BOARD_ED_V10)
 #define LED_GRN     	A3
 #define LED_BLU     	A2
 #define BAT_ENABLE  	(10u)

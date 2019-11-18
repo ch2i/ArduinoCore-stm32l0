@@ -4,8 +4,6 @@ menu.speed=CPU Speed
 menu.opt=Optimize
 menu.version=Board Version
 
-
-
 # Tlera Grasshopper
 # ---------------------------------------
 Grasshopper-L082CZ.name=Grasshopper-L082CZ
@@ -550,7 +548,6 @@ CH2i-Murata-L082CZ.build.pid=0x6666
 CH2i-Murata-L082CZ.build.did=0xffff
 CH2i-Murata-L082CZ.build.usb_manufacturer="CH2i"
 CH2i-Murata-L082CZ.build.usb_product="CH2i Murata L082CZ"
-#CH2i-Murata-L082CZ.build.extra_flags=-DSTM32L082xx -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
 CH2i-Murata-L082CZ.build.ldscript=linker_scripts/STM32L082CZ_FLASH.ld
 CH2i-Murata-L082CZ.build.openocdscript=openocd_scripts/ch2i-murata-l082cz.cfg
 CH2i-Murata-L082CZ.build.variant=CH2i-Murata-L082CZ
