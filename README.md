@@ -1,18 +1,19 @@
-# Arduino Core for STM32L0 based boards (Extension for CH2i Boards)
+# Arduino Core for STM32L0 based boards 
 
 ## What is it ?
 
 ArduinoCore-stm32l0 is targeted at ultra low power scenarios, sensor hubs, with LoRaWAN connectivity.
 
+This repository is here to add to original one CH2i custom boards
 
 ## Supported boards
 
-### Tlera Corp
+### Tlera Corp (by original repo)
  * [Grasshopper-L082CZ](https://www.tindie.com/products/TleraCorp/grasshopper-lora-development-board)
  * [Cricket-L082CZ](https://www.tindie.com/products/TleraCorp/cricket-lorawangnss-asset-tracker)
  * [Cicada-L082CZ](https://www.tindie.com/products/TleraCorp/lorasensortile)
 
-### STMicroelectronics
+### STMicroelectronics (by original repo)
  * [B-L072Z-LRWAN1](http://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html)
  * [P-NUCLEO-LRWAN1](http://www.st.com/en/evaluation-tools/p-nucleo-lrwan1.html)
  * [NUCLEO-L053R8](http://www.st.com/en/evaluation-tools/nucleo-l053r8.html)
@@ -68,7 +69,6 @@ Donwload ZIP file from this repo folder using Clone or Download button then sele
   * Windows: ```~/Documents/Arduino```
  2. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/stm32l0/<VERSION>/``` folder overwriting all files when asked
  3. Restart the Arduino IDE
-
 
 
 ## Recovering from a faulty sketch for Boards
