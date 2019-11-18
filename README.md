@@ -49,14 +49,30 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
 
 ## Installing
 
-### Board Manager
+### Manually
 
- 1. [Download and install the Arduino IDE](https://www.arduino.cc/en/Main/Software) (at least version v1.6.8)
- 2. Start the Arduino IDE
- 3. Go into Preferences
- 4. Add ```https://grumpyoldpizza.github.io/ArduinoCore-stm32l0/package_stm32l0_boards_index.json``` as an "Additional Board Manager URL"
- 5. Open the Boards Manager from the Tools -> Board menu and install "Tlera Corp STM32L0 Boards"
- 6. Select your STM32L0 board from the Tools -> Board menu
+Donwload ZIP file from this rpo folder using Clone or Downlaod button then select Download ZIP
+
+ 1. ```cd <SKETCHBOOK>```, where ```<SKETCHBOOK>``` is your Arduino Sketch folder:
+  * OS X: ```~/Documents/Arduino```
+  * Linux: ```~/Arduino```
+  * Windows: ```~/Documents/Arduino```
+ 2. Create a folder named ```hardware```, if it does not exist, and change directories to it
+ 3. Extract the ZIP file content into the ardware folder
+ 4. Rename the folder ```ArduinoCore-stm32l0-master``` to whatever you like, IE ```CH2i-stm32l0```
+ 5. Restart the Arduino IDE
+
+
+### From git
+
+ 1. Follow steps from Board Manager section above
+ 2. ```cd <SKETCHBOOK>```, where ```<SKETCHBOOK>``` is your Arduino Sketch folder:
+  * OS X: ```~/Documents/Arduino```
+  * Linux: ```~/Arduino```
+  * Windows: ```~/Documents/Arduino```
+ 3. Create a folder named ```hardware```, if it does not exist, and change directories to it
+ 4. Clone this repo: ```git clone https://github.com/ch2i/ArduinoCore-stm32l0.git CH2i/stm32l0```
+ 5. Restart the Arduino IDE
 
 #### OS Specific Setup
 
@@ -68,7 +84,7 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
 
 #####  Windows
 
-###### STM32 BOOTLOADER driver setup for Tlera Corp boards
+###### STM32 BOOTLOADER driver setup for Tlera Corp and CH2i boards
 
  1. Download [Zadig](http://zadig.akeo.ie)
  2. Plugin STM32L0 board and toggle the RESET button while holding down the BOOT button
@@ -90,22 +106,12 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
  1. Plugin STMicroelectronics board
  2. Download and install [ST-Link USB Drivers](http://www.st.com/en/embedded-software/stsw-link009.html)
 
-### From git
-
- 1. Follow steps from Board Manager section above
- 2. ```cd <SKETCHBOOK>```, where ```<SKETCHBOOK>``` is your Arduino Sketch folder:
-  * OS X: ```~/Documents/Arduino```
-  * Linux: ```~/Arduino```
-  * Windows: ```~/Documents/Arduino```
- 3. Create a folder named ```hardware```, if it does not exist, and change directories to it
- 4. Clone this repo: ```git clone https://github.com/grumpyoldpizza/ArduinoCore-stm32l0.git TleraCorp/stm32l0```
- 5. Restart the Arduino IDE
-
-## Recovering from a faulty sketch for Tlera Corp Boards
+## Recovering from a faulty sketch for Tlera Corp or CH2i Boards
 
  Sometimes a faulty sketch can render the normal USB Serial based integration into the Arduindo IDE not working. In this case plugin the STM32L0 board and toggle the RESET button while holding down the BOOT button and program a known to be working sketch to go ack to a working USB Serial setup.
 
 ## Credits
 
+This fork is based GrumpyOldPizza [Arduino STM32L0](https://github.com/GrumpyOldPizza/ArduinoCore-stm32l0)
 This core is based on and compatible with the [Arduino SAMD Core](https://github.com/arduino/ArduinoCore-samd)
 
