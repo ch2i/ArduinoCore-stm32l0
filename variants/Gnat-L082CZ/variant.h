@@ -26,8 +26,8 @@
  * WITH THE SOFTWARE.
  */
 
-#ifndef _VARIANT_GNAT_STM32L082CZ_
-#define _VARIANT_GNAT_STM32L082CZ_
+#ifndef _VARIANT_CH2I_MURATA_STM32L082CZ_
+#define _VARIANT_CH2I_MURATA_STM32L082CZ_
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -140,7 +140,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define PIN_USB_DP           (23ul)
 #define PIN_USB_VBUS         (24ul)
 
-#define PWM_INSTANCE_COUNT    1
+#define PWM_INSTANCE_COUNT    2
 
 #ifdef __cplusplus
 }
@@ -184,4 +184,36 @@ extern Uart Serial3;
 // Alias Serial to SerialUSB
 #define Serial                      SerialUSB
 
-#endif /* _VARIANT_GNAT_STM32L082CZ_ */
+#ifdef LED_BUILTIN
+#undef LED_BUILTIN 
+#endif
+#define LED_BUILTIN (13u)
+#define LED_RED     (13u)
+
+#if defined (BOARD_V10)
+#define LED_GRN     (9u)
+#define LED_BLU     (8u)
+#define BAT_ENABLE  (2u)
+#define ONEWIREBUS 4
+#define ONEWIREPWR 3
+#elif defined (BOARD_V10a)
+#define LED_GRN     A3
+#define LED_BLU     A2
+#define BAT_ENABLE  (10u)
+#define ONEWIREBUS 4
+#define ONEWIREPWR 3
+#elif defined (BOARD_ENVIRODEV_V10)
+#define LED_GRN     	A3
+#define LED_BLU     	A2
+#define BAT_ENABLE  	(10u)
+#define ONEWIREBUS 4
+#define ONEWIREPWR 5
+#define BAT_ANALOG_EXT  A0
+#endif
+
+#define BTN_ACTION  (2u)
+#define BAT_ANALOG 	A1
+
+#define LORA_DIO4   (11u) // D11
+
+#endif /* _VARIANT_CH2I_MURATA_STM32L082CZ_ */
