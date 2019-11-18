@@ -66,7 +66,7 @@ Donwload ZIP file from this repo folder using Clone or Download button then sele
  1. Locate were the original repository was stored by Board Manager
   * OS X: ```~/Library/Arduino15/packages/TleraCorp/hardware/stm32l0/<VERSION>```
   * Linux: ```~/.arduino15/packages/TleraCorp/hardware/stm32l0/<VERSION>```
-  * Windows: ```~/Documents/Arduino```
+  * Windows: ```~/AppData/Local/Arduino15/packages/TleraCorp/hardware/stm32l0/<VERSION>```
  2. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/stm32l0/<VERSION>/``` folder overwriting all files when asked
  3. Restart the Arduino IDE
 
