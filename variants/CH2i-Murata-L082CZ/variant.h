@@ -191,26 +191,44 @@ extern Uart Serial3;
 #define LED_RED     (13u)
 
 #if defined (BOARD_V10)
+
 #define LED_GRN     (9u)
 #define LED_BLU     (8u)
+#define PWM_MAX_RED 0
+#define PWM_MAX_GRN 0
+#define PWM_MAX_BLU	0
 #define BAT_ENABLE  (2u)
-#define ONEWIREBUS 4
-#define ONEWIREPWR 3
+#define ONEWIREBUS 	4
+#define ONEWIREPWR 	3
+
 #elif defined (BOARD_V10a)
+
 #define LED_GRN     A3
 #define LED_BLU     A2
+#define PWM_MAX_RED 96
+#define PWM_MAX_GRN	192
+#define PWM_MAX_BLU 0
 #define BAT_ENABLE  (10u)
-#define ONEWIREBUS 4
-#define ONEWIREPWR 3
+#define ONEWIREBUS 	4
+#define ONEWIREPWR 	3
+
 #elif defined (BOARD_ED_V10)
-#define LED_GRN     	A3
-#define LED_BLU     	A2
-#define BAT_ENABLE  	(10u)
-#define ONEWIREBUS 4
-#define ONEWIREPWR 5
+
+#define LED_GRN     A3
+#define LED_BLU    	A2
+#define PWM_MAX_RED	0
+#define PWM_MAX_GRN	64
+#define PWM_MAX_BLU	0
+#define BAT_ENABLE  (10u)
+#define ONEWIREBUS 	4
+#define ONEWIREPWR 	5
 #define BAT_ANALOG_EXT  A0
+
 #endif
 
+// Button pressed set pin port to HIGH
+#define BTN_PRESSED  HIGH
+#define BTN_RELEASED LOW
 #define BTN_ACTION  (2u)
 #define BAT_ANALOG 	A1
 
