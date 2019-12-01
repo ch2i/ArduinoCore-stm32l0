@@ -547,7 +547,7 @@ CH2i-Murata-L082CZ.build.vid=0x1209
 CH2i-Murata-L082CZ.build.pid=0x6666
 CH2i-Murata-L082CZ.build.did=0xffff
 CH2i-Murata-L082CZ.build.usb_manufacturer="CH2i"
-CH2i-Murata-L082CZ.build.usb_product="CH2i Murata L082CZ"
+#CH2i-Murata-L082CZ.build.usb_product="CH2i Murata L082CZ"
 CH2i-Murata-L082CZ.build.ldscript=linker_scripts/STM32L082CZ_FLASH.ld
 CH2i-Murata-L082CZ.build.openocdscript=openocd_scripts/ch2i-murata-l082cz.cfg
 CH2i-Murata-L082CZ.build.variant=CH2i-Murata-L082CZ
@@ -583,7 +583,10 @@ CH2i-Murata-L082CZ.menu.opt.o3.build.flags.ldspecs=
 
 CH2i-Murata-L082CZ.menu.version.v10=V1.0
 CH2i-Murata-L082CZ.menu.version.v10.build.extra_flags=-DSTM32L082xx -DBOARD_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
+CH2i-Murata-L082CZ.menu.version.v10.build.usb_product="CH2i Murata black V1.0"
 CH2i-Murata-L082CZ.menu.version.v10a=V1.0a
 CH2i-Murata-L082CZ.menu.version.v10a.build.extra_flags=-DSTM32L082xx -DBOARD_V10a -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
+CH2i-Murata-L082CZ.menu.version.v10a.build.usb_product="CH2i Murata Red V1.0a"
 CH2i-Murata-L082CZ.menu.version.ed=ED V1.0
 CH2i-Murata-L082CZ.menu.version.ed.build.extra_flags=-DSTM32L082xx -DBOARD_ED_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
+CH2i-Murata-L082CZ.menu.version.ed.build.usb_product="CH2i ED V1.0"
