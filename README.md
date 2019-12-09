@@ -68,8 +68,10 @@ Donwload ZIP file from this repo folder using `Clone or Download` button then se
   * Windows: ```~/AppData/Local/Arduino15/packages/TleraCorp/hardware/stm32l0/0.0.10```
  2. Extract the ZIP file content (```ArduinoCore-stm32l0-master```) into the ```hardware/stm32l0/0.0.10/``` folder overwriting all files when asked
 
-**Take care on OS X copying whole folder on existing folder with finder will erase original folder contents so you need to go on each archive folder and copy files into destination folder, this will add new files replace other but not delete existing ones** 
+Take care on OS X copying whole folder on existing folder with finder will **erase original folder contents** so you need to go on each archive folder and copy files into destination folder, this will add new files replace other but not delete existing ones*
+
 Or you can use the following terminal command assuming you exracted zip file into your `Download` folder
+
 ```ditto -V  Downloads/ArduinoCore-stm32l0-master/ ~/Library/Arduino15/packages/TleraCorp/hardware/stm32l0/0.0.10/``` 
 
  3. Restart the Arduino IDE
