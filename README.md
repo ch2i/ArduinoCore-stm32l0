@@ -50,6 +50,32 @@ Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0
 #endif
 ```
 
+CH2i private board called Sentinel that is based on Tlera Corp but we added some features such as: 
+
+- RGB LED dedicated IC chip controller by I2C
+- GPS UBLOX M8Q
+- Magnetometer LIS2MDL
+- Accelerometer BM400
+- SPI Flash allowing DOSFS
+- Quectel modem M66
+- Solar harvesting dedicated chip
+- Battery Reading defined by ```BAT_ENABLE``` (Pin to enable battery reading), ```BAT_ANALOG``` (pin to read analog value)
+
+When selected board ```CH2i Sentinel L082CZ```
+
+You can see these boards pinout definition in the file [variant.h](https://github.com/ch2i/ArduinoCore-stm32l0/blob/master/variants/CH2i-Sentinel-L082CZ/variant.h#L213-L244)
+
+Boards can be identified at compilation by the defined symbol ```ARDUINO_STM32L0_CH2I_MURATA``` and version with also the following symbols
+
+```cpp
+#if defined (ARDUINO_STM32L0_CH2I_MURATA)
+	#if defined (BOARD_SENTINEL_V10) 
+	// Code
+	#endif
+#endif
+```
+
+
 ## Installing
 
 ### Install original repository
