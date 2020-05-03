@@ -637,7 +637,10 @@ CH2i-Sentinel-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 CH2i-Sentinel-L082CZ.menu.dosfs.none=None
 CH2i-Sentinel-L082CZ.menu.dosfs.none.build.dosfs_sdcard=0
 CH2i-Sentinel-L082CZ.menu.dosfs.none.build.dosfs_sflash=0
-CH2i-Sentinel-L082CZ.menu.dosfs.sfspi=SFLASH
+CH2i-Sentinel-L082CZ.menu.dosfs.sdspi=SDCARD (SPI)
+CH2i-Sentinel-L082CZ.menu.dosfs.sdspi.build.dosfs_sdcard=1
+CH2i-Sentinel-L082CZ.menu.dosfs.sdspi.build.dosfs_sflash=0
+CH2i-Sentinel-L082CZ.menu.dosfs.sfspi=SFLASH (SPI)
 CH2i-Sentinel-L082CZ.menu.dosfs.sfspi.build.dosfs_sdcard=0
 CH2i-Sentinel-L082CZ.menu.dosfs.sfspi.build.dosfs_sflash=1
 
