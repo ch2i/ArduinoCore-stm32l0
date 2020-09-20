@@ -28,6 +28,7 @@
 
 #include "Arduino.h"
 #include "wiring_private.h"
+#include "../Source/LoRa/Radio/radio.h"
 
 #define PWM_INSTANCE_TIM2      0
 #define PWM_INSTANCE_TIM21     1
@@ -101,8 +102,10 @@ static uint8_t stm32l0_usart2_rx_fifo[32];
 extern const stm32l0_uart_params_t g_Serial2Params = {
     STM32L0_UART_INSTANCE_USART2,
     STM32L0_UART_IRQ_PRIORITY,
-    STM32L0_DMA_CHANNEL_DMA1_CH5_USART2_RX,
-    STM32L0_DMA_CHANNEL_DMA1_CH4_USART2_TX,
+    //STM32L0_DMA_CHANNEL_DMA1_CH5_USART2_RX,
+    //STM32L0_DMA_CHANNEL_DMA1_CH4_USART2_TX,
+    STM32L0_DMA_CHANNEL_DMA1_CH6_USART2_RX,
+    STM32L0_DMA_CHANNEL_NONE,
     &stm32l0_usart2_rx_fifo[0],
     sizeof(stm32l0_usart2_rx_fifo),
     {
@@ -143,39 +146,12 @@ extern const stm32l0_i2c_params_t g_WireParams = {
 
 extern stm32l0_i2c_t g_Wire;
 
+void RadioInit( const RadioEvents_t *events, uint32_t freq )
+{
+    SX1276Init(events, freq);
+}
 
 void initVariant()
 {
-    stm32l0_i2c_transaction_t transaction;
-    uint8_t tx_data[2];
-
-    stm32l0_i2c_create(&g_Wire, &g_WireParams);
-    stm32l0_i2c_enable(&g_Wire, STM32L0_I2C_OPTION_MODE_100K, 0, NULL, NULL);
-
-    tx_data[0] = 0x11;
-    tx_data[1] = 0x20;
-
-    transaction.status = STM32L0_I2C_STATUS_SUCCESS;
-    transaction.control = 0;
-    transaction.address = 0x18;
-    transaction.tx_data = (uint8_t*)&tx_data[0];
-    transaction.rx_data = NULL;
-    transaction.tx_count = 2;
-    transaction.rx_count = 0;
-    transaction.callback = NULL;
-    transaction.context = NULL;
-
-    if (stm32l0_i2c_submit(&g_Wire, &transaction)) {
-        while (transaction.status == STM32L0_I2C_STATUS_BUSY) {
-            armv6m_core_wait();
-        }
-    }
-
-    stm32l0_i2c_disable(&g_Wire);
-
-    if (transaction.status == STM32L0_I2C_STATUS_SUCCESS) {
-        CMWX1ZZABZ_Initialize(STM32L0_GPIO_PIN_PH1, STM32L0_GPIO_PIN_NONE);
-    } else {
-        CMWX1ZZABZ_Initialize(STM32L0_GPIO_PIN_PB14, STM32L0_GPIO_PIN_NONE);
-    }
+    CMWX1ZZABZ_Initialize(STM32L0_GPIO_PIN_PB14, STM32L0_GPIO_PIN_NONE);
 }
