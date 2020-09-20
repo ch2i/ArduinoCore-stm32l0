@@ -210,8 +210,6 @@ extern Uart Serial3;
 #define LED_BUILTIN (13u)
 #define LED_RED     (13u)
 
-#if defined (BOARD_SENTINEL_V10)
-
 #define BAT_ENABLE  (2u)
 #define BTN_ACTION  (2u)
 #define BAT_ANALOG 	A1
@@ -222,8 +220,8 @@ extern Uart Serial3;
 #define GNSS_BACKUP  A0  
 
 //BMA280 definitions
-#define BMA400_INT1  (3u) // interrupt1 pin definitions, no motion detect
-#define BMA400_INT2  A4   // interrupt2 pin definitions, wakeup
+#define BMA400_INT1  A4 	// interrupt1 pin definitions, no motion detect
+#define BMA400_INT2  (3u)	// interrupt2 pin definitions, wakeup
 
 #define LIS2MDL_INT  (9u) // interrupt for magnetometer data ready
 
@@ -236,8 +234,6 @@ extern Uart Serial3;
 #define M66_POWER_VBAT (8u)
 #define M66_RXD  		A2
 #define M66_TXD  		A3
-
-#endif
 
 // Button pressed set pin port to HIGH
 #define BTN_PRESSED  HIGH
