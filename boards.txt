@@ -39,10 +39,6 @@ Grasshopper-L082CZ.menu.usb.cdc=Serial
 Grasshopper-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
 Grasshopper-L082CZ.menu.usb.cdc_msc=Serial + Mass Storage
 Grasshopper-L082CZ.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
-Grasshopper-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-Grasshopper-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
-Grasshopper-L082CZ.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
-Grasshopper-L082CZ.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
 Grasshopper-L082CZ.menu.usb.none=No USB
 Grasshopper-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -112,10 +108,6 @@ Cricket-L082CZ.menu.usb.cdc=Serial
 Cricket-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
 Cricket-L082CZ.menu.usb.cdc_msc=Serial + Mass Storage
 Cricket-L082CZ.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
-Cricket-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-Cricket-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
-Cricket-L082CZ.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
-Cricket-L082CZ.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
 Cricket-L082CZ.menu.usb.none=No USB
 Cricket-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -181,10 +173,6 @@ Cicada-L082CZ.menu.usb.cdc=Serial
 Cicada-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
 Cicada-L082CZ.menu.usb.cdc_msc=Serial + Mass Storage
 Cicada-L082CZ.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
-Cicada-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-Cicada-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
-Cicada-L082CZ.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
-Cicada-L082CZ.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
 Cicada-L082CZ.menu.usb.none=No USB
 Cicada-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -249,8 +237,6 @@ Gnat-L082CZ.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS
 
 Gnat-L082CZ.menu.usb.cdc=Serial
 Gnat-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
-Gnat-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-Gnat-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
 Gnat-L082CZ.menu.usb.none=No USB
 Gnat-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -556,8 +542,6 @@ CH2i-Murata-L082CZ.build.variant_system_include="-I{runtime.platform.path}/syste
 
 CH2i-Murata-L082CZ.menu.usb.cdc=Serial
 CH2i-Murata-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
-CH2i-Murata-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-CH2i-Murata-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
 CH2i-Murata-L082CZ.menu.usb.none=No USB
 CH2i-Murata-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -596,7 +580,7 @@ CH2i-Murata-L082CZ.menu.version.ed.build.usb_product="CH2i ED V1.0"
 # ---------------------------------------
 CH2i-Sentinel-L082CZ.name=CH2i Sentinel L082CZ
 CH2i-Sentinel-L082CZ.vid.0=0x1209
-CH2i-Sentinel-L082CZ.pid.0=0x6667
+CH2i-Sentinel-L082CZ.pid.0=0x7760
 
 CH2i-Sentinel-L082CZ.upload.tool=stm32l0_dfu
 CH2i-Sentinel-L082CZ.upload.protocol=dfu
@@ -608,11 +592,11 @@ CH2i-Sentinel-L082CZ.upload.native_usb=false
 
 CH2i-Sentinel-L082CZ.build.mcu=cortex-m0plus
 CH2i-Sentinel-L082CZ.build.f_cpu=32000000L
-CH2i-Sentinel-L082CZ.build.board=STM32L0_CH2I_SENTINEL
+CH2i-Sentinel-L082CZ.build.board=STM32L0_SENTINEL
 CH2i-Sentinel-L082CZ.build.arch=stm32l0
 CH2i-Sentinel-L082CZ.build.core=arduino
 CH2i-Sentinel-L082CZ.build.vid=0x1209
-CH2i-Sentinel-L082CZ.build.pid=0x6667
+CH2i-Sentinel-L082CZ.build.pid=0x7760
 CH2i-Sentinel-L082CZ.build.did=0xffff
 CH2i-Sentinel-L082CZ.build.usb_manufacturer="CH2i"
 CH2i-Sentinel-L082CZ.build.usb_product="CH2i Sentinel L082CZ"
@@ -627,10 +611,6 @@ CH2i-Sentinel-L082CZ.menu.usb.cdc=Serial
 CH2i-Sentinel-L082CZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
 CH2i-Sentinel-L082CZ.menu.usb.cdc_msc=Serial + Mass Storage
 CH2i-Sentinel-L082CZ.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
-CH2i-Sentinel-L082CZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-CH2i-Sentinel-L082CZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
-CH2i-Sentinel-L082CZ.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
-CH2i-Sentinel-L082CZ.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
 CH2i-Sentinel-L082CZ.menu.usb.none=No USB
 CH2i-Sentinel-L082CZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
@@ -663,3 +643,10 @@ CH2i-Sentinel-L082CZ.menu.opt.o2.build.flags.ldspecs=
 CH2i-Sentinel-L082CZ.menu.opt.o3=Fastest
 CH2i-Sentinel-L082CZ.menu.opt.o3.build.flags.optimize=-O3
 CH2i-Sentinel-L082CZ.menu.opt.o3.build.flags.ldspecs=
+
+CH2i-Sentinel-L082CZ.menu.version.v10=V1.0
+CH2i-Sentinel-L082CZ.menu.version.v10.build.extra_flags=-DSTM32L082xx -DBOARD_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+CH2i-Sentinel-L082CZ.menu.version.v10.build.usb_product="CH2i Sentinel V1.0"
+CH2i-Sentinel-L082CZ.menu.version.v20=V2.0
+CH2i-Sentinel-L082CZ.menu.version.v20.build.extra_flags=-DSTM32L082xx -DBOARD_V20 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+CH2i-Sentinel-L082CZ.menu.version.v20.build.usb_product="CH2i Sentinel V2"
