@@ -28,6 +28,7 @@
 
 #include "Arduino.h"
 #include "wiring_private.h"
+#include "../Source/LoRa/Radio/radio.h"
 
 #define PWM_INSTANCE_TIM2      0
 #define PWM_INSTANCE_TIM22     1
@@ -115,8 +116,10 @@ static uint8_t stm32l0_usart2_rx_fifo[32];
 extern const stm32l0_uart_params_t g_Serial2Params = {
     STM32L0_UART_INSTANCE_USART2,
     STM32L0_UART_IRQ_PRIORITY,
-    STM32L0_DMA_CHANNEL_DMA1_CH5_USART2_RX,
-    STM32L0_DMA_CHANNEL_DMA1_CH4_USART2_TX,
+    //STM32L0_DMA_CHANNEL_DMA1_CH5_USART2_RX,
+    //STM32L0_DMA_CHANNEL_DMA1_CH4_USART2_TX,
+    STM32L0_DMA_CHANNEL_DMA1_CH6_USART2_RX,
+    STM32L0_DMA_CHANNEL_NONE,
     &stm32l0_usart2_rx_fifo[0],
     sizeof(stm32l0_usart2_rx_fifo),
     {
@@ -181,12 +184,18 @@ extern const stm32l0_sdspi_params_t g_SDSPIParams = {
     STM32L0_GPIO_PIN_PB12,
 };
 
+void RadioInit( const RadioEvents_t *events, uint32_t freq )
+{
+    SX1276Init(events, freq);
+}
+
 void initVariant()
 {
+    CMWX1ZZABZ_Initialize(STM32L0_GPIO_PIN_PH1, STM32L0_GPIO_PIN_NONE);
+
+/*
     stm32l0_i2c_transaction_t transaction;
     uint8_t tx_data[2];
-
-    CMWX1ZZABZ_Initialize(STM32L0_GPIO_PIN_PH1, STM32L0_GPIO_PIN_NONE);
 
     stm32l0_i2c_create(&g_Wire, &g_WireParams);
     stm32l0_i2c_enable(&g_Wire, STM32L0_I2C_OPTION_MODE_100K, 0, NULL, NULL);
@@ -206,7 +215,7 @@ void initVariant()
 
     if (stm32l0_i2c_submit(&g_Wire, &transaction)) {
         while (transaction.status == STM32L0_I2C_STATUS_BUSY) {
-            armv6m_core_wait();
+            __WFE();
         }
     }
 
@@ -225,11 +234,12 @@ void initVariant()
 
     if (stm32l0_i2c_submit(&g_Wire, &transaction)) {
         while (transaction.status == STM32L0_I2C_STATUS_BUSY) {
-            armv6m_core_wait();
+            __WFE();
         }
     }
 
     stm32l0_i2c_disable(&g_Wire);
+*/
 
 #if (DOSFS_SFLASH == 0)
     stm32l0_gpio_pin_configure(STM32L0_GPIO_PIN_PH0, (STM32L0_GPIO_PARK_PULLUP | STM32L0_GPIO_PUPD_NONE | STM32L0_GPIO_OSPEED_VERY_HIGH | STM32L0_GPIO_OTYPE_PUSHPULL | STM32L0_GPIO_MODE_OUTPUT));
@@ -243,7 +253,7 @@ void initVariant()
 
     armv6m_core_udelay(20);
 
-    stm32l0_spi_data(&g_SPI, 0xb9);
+    stm32l0_spi_data8(&g_SPI, 0xb9);
 
     armv6m_core_udelay(20);
 
