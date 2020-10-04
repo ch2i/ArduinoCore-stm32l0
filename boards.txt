@@ -600,7 +600,7 @@ CH2i-Sentinel-L082CZ.build.pid=0x7760
 CH2i-Sentinel-L082CZ.build.did=0xffff
 CH2i-Sentinel-L082CZ.build.usb_manufacturer="CH2i"
 CH2i-Sentinel-L082CZ.build.usb_product="CH2i Sentinel L082CZ"
-CH2i-Sentinel-L082CZ.build.extra_flags=-DSTM32L082xx -DBOARD_SENTINEL_V10 -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+CH2i-Sentinel-L082CZ.build.extra_flags=-DSTM32L082xx -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
 CH2i-Sentinel-L082CZ.build.ldscript=linker_scripts/STM32L082CZ_FLASH.ld
 CH2i-Sentinel-L082CZ.build.openocdscript=openocd_scripts/CH2i-Sentinel-l082cz.cfg
 CH2i-Sentinel-L082CZ.build.variant=CH2i-Sentinel-L082CZ
