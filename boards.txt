@@ -627,10 +627,12 @@ CH2i-Sentinel-L082CZ.menu.dosfs.sfspi.build.dosfs_sflash=1
 
 # GNSS Antenna type
 # -----------------
+CH2i-Sentinel-L082CZ.menu.gnssantenna.byconfig=Sentinel Config
+CH2i-Sentinel-L082CZ.menu.gnssantenna.byconfig.build.gnssantenna=0
 CH2i-Sentinel-L082CZ.menu.gnssantenna.internal=GNSS Passive
-CH2i-Sentinel-L082CZ.menu.gnssantenna.internal.build.gnssantenna=0
+CH2i-Sentinel-L082CZ.menu.gnssantenna.internal.build.gnssantenna=1
 CH2i-Sentinel-L082CZ.menu.gnssantenna.external=GNSS Active
-CH2i-Sentinel-L082CZ.menu.gnssantenna.external.build.gnssantenna=1
+CH2i-Sentinel-L082CZ.menu.gnssantenna.external.build.gnssantenna=2
 
 # Board Version
 # -------------
